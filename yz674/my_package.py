@@ -5,7 +5,7 @@ def add(a, b):
     return a + b
 
 
-def test():
+def test(a, b):
     conn = sqlite3.connect("my_database.db")
     cursor = conn.cursor()
 
@@ -60,7 +60,7 @@ def test():
 
     # Insert data
     cursor.execute(
-        """INSERT INTO customers (customer_id, customer_name, country)
+        """INSERT  OR IGNORE INTO customers (customer_id, customer_name, country)
             VALUES
                 (1, 'Customer A', 'USA'),
                 (2, 'Customer B', 'Canada'),
@@ -70,7 +70,7 @@ def test():
     )
 
     cursor.execute(
-        """INSERT INTO orders (order_id, order_date, customer_id)
+        """INSERT OR IGNORE INTO orders (order_id, order_date, customer_id)
             VALUES
                 (101, '2023-10-01', 1),
                 (102, '2023-10-02', 2),
@@ -80,7 +80,7 @@ def test():
     )
 
     cursor.execute(
-        """INSERT INTO order_items (order_item_id, order_id, product_id, quantity, unit_price)
+        """INSERT OR IGNORE INTO order_items (order_item_id, order_id, product_id, quantity, unit_price)
             VALUES
                 (1001, 101, 1, 2, 10.99),
                 (1002, 101, 2, 3, 15.99),
@@ -92,7 +92,7 @@ def test():
     )
 
     cursor.execute(
-        """INSERT INTO products (product_id, product_name, category_id, price)
+        """INSERT OR IGNORE INTO products (product_id, product_name, category_id, price)
             VALUES
                 (1, 'Product 1', 1, 10.99),
                 (2, 'Product 2', 1, 15.99),
@@ -101,7 +101,7 @@ def test():
     )
 
     cursor.execute(
-        """INSERT INTO categories (category_id, category_name)
+        """INSERT OR IGNORE INTO categories (category_id, category_name)
             VALUES
                 (1, 'Category A'),
                 (2, 'Category B');"""
@@ -121,6 +121,7 @@ def test():
                 ORDER BY total_sales DESC;"""
     )
     rows = cursor.fetchall()
+    print("The result of a + b is " + str(add(a, b)))
     print("-------print all records-------")
     for row in rows:
         print(row)

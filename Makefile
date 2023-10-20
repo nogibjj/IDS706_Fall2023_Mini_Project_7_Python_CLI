@@ -3,12 +3,12 @@ install:
 		pip install -r requirements.txt
 
 format:	
-	black ./my_package/*.py 
+	black ./yz674/*.py 
 
 lint:
-	pylint --disable=R,C,locally-disabled --ignore-patterns=./my_package/test_.*?py ./my_package/*.py
+	pylint --disable=R,C,locally-disabled --ignore-patterns=./yz674/test_.*?py ./yz674/*.py
 
 test:
-	python3 -m pytest -vv --cov=test_package ./my_package/test_*.py
+	python3 -m pytest -vv --cov=test_package ./yz674/test_*.py
 		
 all: install format lint test  

@@ -2,9 +2,9 @@
 [![lint](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/lint.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/lint.yml)
 [![format](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/format.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/format.yml)
 [![test](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/test.yml/badge.svg)](https://github.com/yuchenz427/IDS706-Python-Template/actions/workflows/test.yml)
-# IDS706-Python-Template
+# IDS706_Fall2023_Mini_Project_7_Python_CLI
 
-Python template repo for Fall 2023 IDS_706-Data Engineering Systems at Duke Univ. 
+IDS706 week 7 mini project: Package a Python script into a command-line tool and write a user guide.
 
 It contains:
 
@@ -18,14 +18,27 @@ It contains:
 
 It also includes ``main.py`` and ``test_main.py`` as sample files to show the functionality of the CI pipeline.
 
-## Github Actions Demo
+## User Guide
 
-`Github Actions` is configured to kick off workflows with Github events. Below shows some samples:
-
-![img](./demo_img/demo_make_install.png)
-
-![img](./demo_img/demo_make_test.png)
-
-![img](./demo_img/demo_make_format.png)
-
-![img](./demo_img/demo_make_lint.png)
+The command line tool is packaged into `./yz674` folder. To install the package, first run 
+```bash
+make all
+```
+to install the whole project. Then run 
+```bash
+python3 setup.py sdist bdist_wheel
+```
+at the top level directory to generate the package. Then run 
+```bash
+pip install .
+```
+to install the package called `yz674`. The package is ready to use and can be imported to `main.py`, so you can run 
+```bash
+python3 ./main.py add [arg1] [arg2]
+```
+and it should print out the result of `arg1 + arg2` and also some result of SQLite database operations. For example, if you run
+```bash
+python3 ./main.py add 1 2
+```
+the result should be <br>
+![](demo_img/demo_img.png)
