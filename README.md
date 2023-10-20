@@ -1,5 +1,4 @@
 [![install](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/install.yml)
-[![lint](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/lint.yml)
 [![format](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/format.yml)
 [![test](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/IDS706_Fall2023_Mini_Project_7_Python_CLI/actions/workflows/test.yml)
 # IDS706_Fall2023_Mini_Project_7_Python_CLI
