@@ -128,4 +128,4 @@ def test(a, b):
 
 
 if __name__ == "__main__":
-    test()
+    test(1, 2)
