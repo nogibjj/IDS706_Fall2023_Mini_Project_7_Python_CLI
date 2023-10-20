@@ -3,7 +3,7 @@ Test goes here
 
 """
 
-from main import add
+from my_package import add
 
 
 def test_add_positive_numbers():
